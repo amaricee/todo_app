@@ -3,9 +3,9 @@
     <input v-model="title" placeholder="Masukkan Tugas Baru" />
 
     <select v-model="priority">
-      <option :value="1">Low</option>
+      <option :value="1">High</option>
       <option :value="2">Medium</option>
-      <option :value="3">High</option>
+      <option :value="3">Low</option>
     </select>
 
     <input type="date" v-model="due_date" />

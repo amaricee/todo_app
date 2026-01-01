@@ -4,7 +4,6 @@ def migrate():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # Buat tabel todos sesuai database Anda
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS todos (
         id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,

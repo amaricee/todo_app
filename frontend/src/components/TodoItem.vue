@@ -14,13 +14,12 @@
       {{ todo.title }} | P{{ todo.priority }} | {{ todo.due_date }}
     </span>
 
-    <!-- MODE EDIT -->
     <div v-else class="edit-form">
       <input v-model="editTitle" />
       <select v-model="editPriority">
-        <option :value="1">Low</option>
+        <option :value="1">High</option>
         <option :value="2">Medium</option>
-        <option :value="3">High</option>
+        <option :value="3">Low</option>
       </select>
       <input type="date" v-model="editDueDate" />
     </div>

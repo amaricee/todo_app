@@ -27,7 +27,7 @@
           <td>{{ todo.title }}</td>
           <td>
             <span :class="'priority p' + todo.priority">
-              {{ ["Low", "Medium", "High"][todo.priority - 1] }}
+              {{ ["High", "Medium", "Low"][todo.priority - 1] }}
             </span>
           </td>
           <td>{{ todo.due_date }}</td>
@@ -44,28 +44,24 @@
       </tbody>
     </table>
 
-    <!-- Modal Edit -->
     <div class="modal modal-edit" v-if="showModal">
       <div class="modal-content">
         <h3>Edit Todo</h3>
         <input v-model="editTitle" placeholder="Judul todo" />
         <select v-model="editPriority">
-          <option :value="1">Low</option>
+          <option :value="1">High</option>
           <option :value="2">Medium</option>
-          <option :value="3">High</option>
+          <option :value="3">Low</option>
         </select>
         <input type="date" v-model="editDueDate" />
 
         <div class="modal-buttons">
-          <!-- Tombol Simpan (hijau) -->
           <button class="save-btn" @click="saveEdit">Simpan</button>
-          <!-- Tombol Batal (merah) -->
           <button class="cancel-btn" @click="closeModal">Batal</button>
         </div>
       </div>
     </div>
 
-    <!-- Modal Konfirmasi Hapus -->
     <div class="modal modal-delete" v-if="showDeleteModal">
       <div class="modal-content">
         <h3>Konfirmasi Hapus</h3>
@@ -76,9 +72,7 @@
           >"?
         </p>
         <div class="modal-buttons">
-          <!-- Tombol Hapus (merah) -->
           <button class="delete-btn" @click="confirmDelete">Hapus</button>
-          <!-- Tombol Batal (hijau) -->
           <button class="cancel-btn" @click="closeDeleteModal">Batal</button>
         </div>
       </div>
@@ -103,7 +97,6 @@ export default {
     };
   },
   methods: {
-    // Edit Modal
     openEditModal(todo) {
       this.editingTodo = todo;
       this.editTitle = todo.title;
@@ -129,7 +122,6 @@ export default {
       this.closeModal();
     },
 
-    // Delete Modal
     openDeleteModal(todo) {
       this.deletingTodo = todo;
       this.showDeleteModal = true;
