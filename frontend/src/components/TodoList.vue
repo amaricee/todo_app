@@ -8,6 +8,7 @@
           <th>Prioritas</th>
           <th>Deadline</th>
           <th>Keterangan</th>
+          <th></th> 
         </tr>
       </thead>
       <tbody>

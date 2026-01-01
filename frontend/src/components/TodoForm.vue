@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="submit">
-    <input v-model="title" placeholder="Judul todo" />
+    <input v-model="title" placeholder="Masukkan Tugas Baru" />
 
     <select v-model="priority">
       <option :value="1">Low</option>

@@ -1,5 +1,5 @@
 <template>
-  <h1>Todo App</h1>
+  <h1>List Tugas</h1>
 
   <TodoForm @add="addTodo" />
 
