@@ -9,6 +9,7 @@
     <span
       v-if="!isEdit"
       :class="{ completed: Number(todo.is_completed) === 1 }"
+      :data-priority="todo.priority"
     >
       {{ todo.title }} | P{{ todo.priority }} | {{ todo.due_date }}
     </span>
