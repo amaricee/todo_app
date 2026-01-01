@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.todo-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item button {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.edit-form {
+  display: flex;
+  gap: 6px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
